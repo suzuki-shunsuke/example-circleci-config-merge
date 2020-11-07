@@ -11,7 +11,7 @@ jobs:
     steps:
       - run:
           name: setup
-          command: apk add ca-certificates bash git
+          command: apk add ca-certificates bash git curl
       - checkout
       - run:
           name: test .circleci/config.yml

@@ -1,5 +1,9 @@
 # example-circleci-config-merge
 
+[![CircleCI](https://circleci.com/gh/suzuki-shunsuke/example-circleci-config-merge.svg?style=svg)](https://circleci.com/gh/suzuki-shunsuke/example-circleci-config-merge)
+[![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/example-circleci-config-merge.svg)](https://github.com/suzuki-shunsuke/example-circleci-config-merge)
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/example-circleci-config-merge/master/LICENSE)
+
 Example the usage of [circleci-config-merge](https://github.com/suzuki-shunsuke/circleci-config-merge).
 
 ## How to update .cirleci/config.yml
@@ -32,6 +36,10 @@ Please see [ci/test-circleci-config.sh](ci/test-circleci-config.sh).
 
 It is helpful to send a guide when CI fails.
 In this example, this feature is implemented with [github-comment](https://github.com/suzuki-shunsuke/github-comment).
+
+https://github.com/suzuki-shunsuke/example-circleci-config-merge/pull/2#issuecomment-723423499
+
+![guide](https://user-images.githubusercontent.com/13323303/98437737-120a3780-2128-11eb-878b-ffd244ffdf17.png)
 
 ## LICENSE
 

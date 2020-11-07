@@ -39,7 +39,7 @@ jobs:
     - image: alpine:3.12.1
     steps:
     - run:
-        command: apk add ca-certificates bash git
+        command: apk add ca-certificates bash git curl
         name: setup
     - checkout
     - run:
