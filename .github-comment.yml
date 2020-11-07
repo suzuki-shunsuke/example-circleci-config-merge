@@ -1,0 +1,39 @@
+---
+# https://github.com/suzuki-shunsuke/github-comment
+templates:
+  exit_code: ':{{if eq .ExitCode 0}}white_check_mark{{else}}x{{end}}: Exit Code {{.ExitCode}}'
+  join_command: |
+    ```
+    $ {{.JoinCommand | AvoidHTMLEscape}}
+    ```
+  hidden_combined_output: |
+    <details>
+
+    <pre><code>{{.CombinedOutput | AvoidHTMLEscape}}</code></pre>
+
+    </details>
+  link: '[workflow](https://circleci.com/workflow-run/{{Env "CIRCLE_WORKFLOW_ID" }}) [job]({{Env "CIRCLE_BUILD_URL"}})'
+  header: '{{template "link" .}} (job: {{env "CIRCLE_JOB" }})'
+post:
+  compare-circleci-config:
+    template: |
+      :x: {{template "header" .}}
+
+      .circleci/config.yml doesn't match with the result of `circleci-config-merge`.
+
+      Don't edit .circleci/config.yml directly!
+      .circleci/config.yml is being split per service.
+      If you want to update .circleci/config.yml, update split files and run
+
+      $ make circleci
+
+      and commit split files and .circleci/config.yml.
+exec:
+  default:
+    - when: ExitCode != 0
+      template: |
+        {{template "exit_code" .}} {{template "header" .}}
+
+        {{template "join_command" .}}
+
+        {{template "hidden_combined_output" .}}

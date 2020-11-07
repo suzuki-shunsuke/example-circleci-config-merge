@@ -1,0 +1,18 @@
+---
+version: "2.1"
+workflows:
+  build:
+    jobs:
+      - test-circleci-config
+jobs:
+  test-circleci-config:
+    docker:
+      - image: alpine:3.12.1
+    steps:
+      - run:
+          name: setup
+          command: apk add ca-certificates bash git
+      - checkout
+      - run:
+          name: test .circleci/config.yml
+          command: bash ci/test-circleci-config.sh
