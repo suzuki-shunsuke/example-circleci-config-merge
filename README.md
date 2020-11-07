@@ -33,6 +33,10 @@ Please see [ci/test-circleci-config.sh](ci/test-circleci-config.sh).
 It is helpful to send a guide when CI fails.
 In this example, this feature is implemented with [github-comment](https://github.com/suzuki-shunsuke/github-comment).
 
+https://github.com/suzuki-shunsuke/example-circleci-config-merge/pull/2#issuecomment-723423499
+
+![guide](https://user-images.githubusercontent.com/13323303/98437737-120a3780-2128-11eb-878b-ffd244ffdf17.png)
+
 ## LICENSE
 
 [MIT](LICNSE)
