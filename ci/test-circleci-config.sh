@@ -11,5 +11,5 @@ akoi install
 
 tempfile=$(mktemp)
 github-comment exec -- bash scripts/merge-circleci-config.sh > "$tempfile"
-github-comment exec -k compare-circleci-config -- dyff -bs "$tempfile" .circleci/config.yml
+github-comment exec -k compare-circleci-config -- dyff between -bs "$tempfile" .circleci/config.yml
 rm "$tempfile"
