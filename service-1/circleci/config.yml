@@ -4,7 +4,7 @@ commands:
     steps:
       - run:
           name: foo
-          command: echo foo
+          command: echo foo!!!
 executors:
   foo:
     docker:
