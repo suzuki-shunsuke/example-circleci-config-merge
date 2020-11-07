@@ -34,6 +34,8 @@ exec:
         .circleci/config.yml is being split per service.
         If you want to update .circleci/config.yml, update split files and run
 
+        ```
         $ make circleci
+        ```
 
-        and commit split files and .circleci/config.yml.
+        and commit both split files and .circleci/config.yml.
