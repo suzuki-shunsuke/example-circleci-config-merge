@@ -1,5 +1,9 @@
 # example-circleci-config-merge
 
+[![CircleCI](https://circleci.com/gh/suzuki-shunsuke/example-circleci-config-merge.svg?style=svg)](https://circleci.com/gh/suzuki-shunsuke/example-circleci-config-merge)
+[![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/example-circleci-config-merge.svg)](https://github.com/suzuki-shunsuke/example-circleci-config-merge)
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/example-circleci-config-merge/master/LICENSE)
+
 Example the usage of [circleci-config-merge](https://github.com/suzuki-shunsuke/circleci-config-merge).
 
 ## How to update .cirleci/config.yml
