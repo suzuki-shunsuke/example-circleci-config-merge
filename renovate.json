@@ -1,0 +1,22 @@
+{
+  "enabledManagers": ["regex"],
+  "packageRules": [
+    {
+      "managers": ["regex"],
+      "automerge": true
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^ci/install-akoi\\.sh"],
+      "matchStrings": ["AKOI_VERSION=(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "suzuki-shunsuke/akoi",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": [".akoi.yml"],
+      "matchStrings": ["version: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
