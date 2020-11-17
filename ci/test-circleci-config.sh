@@ -6,7 +6,7 @@ set -o pipefail
 cd "$(dirname "$0")/.."
 
 export PATH="$PWD/.akoi/bin:$PATH"
-bash scripts/install-akoi.sh
+bash ci/install-akoi.sh
 akoi install
 
 tempfile=$(mktemp)

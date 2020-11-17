@@ -1,32 +1,10 @@
 ---
 # https://github.com/suzuki-shunsuke/github-comment
-templates:
-  exit_code: ':{{if eq .ExitCode 0}}white_check_mark{{else}}x{{end}}: Exit Code {{.ExitCode}}'
-  join_command: |
-    ```
-    $ {{.JoinCommand | AvoidHTMLEscape}}
-    ```
-  hidden_combined_output: |
-    <details>
-
-    <pre><code>{{.CombinedOutput | AvoidHTMLEscape}}</code></pre>
-
-    </details>
-  link: '[workflow](https://circleci.com/workflow-run/{{Env "CIRCLE_WORKFLOW_ID" }}) [job]({{Env "CIRCLE_BUILD_URL"}})'
-  header: '{{template "link" .}} (job: {{env "CIRCLE_JOB" }})'
 exec:
-  default:
-    - when: ExitCode != 0
-      template: |
-        {{template "exit_code" .}} {{template "header" .}}
-
-        {{template "join_command" .}}
-
-        {{template "hidden_combined_output" .}}
   compare-circleci-config:
     - when: ExitCode != 0
       template: |
-        :x: {{template "header" .}}
+        :x: {{template "link" .}}
 
         .circleci/config.yml doesn't match with the result of `circleci-config-merge`.
 
