@@ -6,7 +6,7 @@ link_path: .akoi/bin/{{.Name}}
 packages:
   circleci-config-merge:
     url: 'https://github.com/suzuki-shunsuke/{{.Name}}/releases/download/{{.Version}}/{{.Name}}_{{trimPrefix "v" .Version}}_{{.OS}}_{{.Arch}}.tar.gz'
-    version: v0.1.4  # renovate: depName=suzuki-shunsuke/circleci-config-merge
+    version: v1.1.6 # renovate: depName=suzuki-shunsuke/circleci-config-merge
     files:
       - name: circleci-config-merge
         archive: "{{.Name}}"
