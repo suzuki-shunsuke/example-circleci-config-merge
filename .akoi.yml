@@ -19,7 +19,7 @@ packages:
         archive: "dyff-{{.OS}}-{{.Arch}}"
   github-comment:
     url: 'https://github.com/suzuki-shunsuke/{{.Name}}/releases/download/{{.Version}}/{{.Name}}_{{trimPrefix "v" .Version}}_{{.OS}}_{{.Arch}}.tar.gz'
-    version: v1.14.2  # renovate: depName=suzuki-shunsuke/github-comment
+    version: v6.0.4 # renovate: depName=suzuki-shunsuke/github-comment
     files:
       - name: github-comment
         archive: "{{.Name}}"
